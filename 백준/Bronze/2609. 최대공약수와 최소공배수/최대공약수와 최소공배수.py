@@ -16,3 +16,11 @@ elif M_0 % m_0 == 0:
     print(M_0)
 else:
     print(int(M_0 * m_0 / m))
+
+# eluis80776님의 답    
+# m, n = map(int, (input().split()))
+# o = m * n
+# while n != 0:
+#     t = m % n
+#     m, n = n, t
+# print(m, o // m, sep = '\n')
