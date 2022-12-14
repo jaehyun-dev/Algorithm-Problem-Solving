@@ -1,7 +1,8 @@
-k = int(input())
+import sys
+k = int(sys.stdin.readline().rstrip())
 arr = []
 for _ in range(k):
-    a = int(input())
+    a = int(sys.stdin.readline().rstrip())
     if a == 0:
         arr.pop()
     else:
