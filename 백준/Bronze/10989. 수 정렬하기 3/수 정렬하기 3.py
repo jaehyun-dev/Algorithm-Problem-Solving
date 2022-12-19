@@ -6,6 +6,6 @@ for _ in range(n):
     a = int(input())
     arr[a] += 1
 for i in range(10001):
-    if arr[i]:
-        for _ in range(arr[i]):
-            print(i)
+#    if arr[i]:
+    for _ in range(arr[i]):
+        print(i)
