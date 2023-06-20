@@ -1,0 +1,1 @@
+print("YES" if {"M", "O", "B", "I", "S"}.issubset(set(input())) else "NO")
