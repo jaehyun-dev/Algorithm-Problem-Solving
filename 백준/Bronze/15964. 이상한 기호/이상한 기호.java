@@ -5,13 +5,6 @@ public class Main {
 		int A, B;
 		A = sc.nextInt();
 		B = sc.nextInt();
-		int result = newOperation(A, B);
-		System.out.println(result);
+		System.out.println((A + B) * (A - B));
 	}
-	
-	public static int newOperation(int A, int B) {
-		int first = A + B;
-		int second = A - B;
-		return first * second;
-	}	
 }
