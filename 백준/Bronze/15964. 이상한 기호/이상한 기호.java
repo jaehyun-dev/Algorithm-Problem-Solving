@@ -12,7 +12,6 @@ public class Main {
 	public static int newOperation(int A, int B) {
 		int first = A + B;
 		int second = A - B;
-		int res = first * second;
-		return res;
+		return first * second;
 	}	
 }
