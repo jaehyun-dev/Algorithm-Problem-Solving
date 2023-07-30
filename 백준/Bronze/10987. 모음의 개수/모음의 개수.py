@@ -1,6 +1,7 @@
-a = ["a", "e", "i", "o", "u"]
+a = set(["a", "e", "i", "o", "u"])
 b = 0
 c = input()
-for v in a:
-    b += c.count(v)
+for i in c:
+    if i in a:
+        b += 1
 print(b)
