@@ -2,9 +2,9 @@ N, M, P = map(int, input().split())
 outer_flag = False
 for _ in range(N):
     s = list(map(int, input().split()))
+    s.sort()
     i = 0
     while i < len(s):
-        s.sort()
         flag = True
         for j in range(len(s)):
             if 0 <= s[j] <= P:
