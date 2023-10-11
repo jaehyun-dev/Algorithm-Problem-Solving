@@ -1,27 +1,28 @@
 N, M, P = map(int, input().split())
 outer_flag = False
+flag = True
 for _ in range(N):
     s = list(map(int, input().split()))
     s.sort()
-    i = 0
-    while i < len(s):
-        flag = True
-        for j in range(len(s)):
-            if 0 <= s[j] <= P:
-                P += s[j]
-                s.remove(s[j])
+    cnt = s.count(-1)
+    l = s[cnt:]
+    for i in l:
+        if i <= P:
+            P += i
+        else:
+            if cnt > 0:
+                P *= 2
+                cnt -= 1
+                if i <= P:
+                    P += i
+                else:
+                    flag = False
+                    break
+            else:
                 flag = False
                 break
-        if flag:
-            if s[0] == -1:
-                P *= 2
-                s.remove(s[0])
-                continue
-        if flag:
-            outer_flag = True
-            break
-    if outer_flag:
-        print(0)
+    for i in range(cnt):
+        P *= 2
+    if not flag:
         break
-if not outer_flag:
-    print(1)
+print(1 if flag else 0)
