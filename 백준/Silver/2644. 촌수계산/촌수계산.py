@@ -14,7 +14,6 @@ for _ in range(m):
 q = collections.deque()
 q.append(a)
 vis[a] = 1
-c = 1
 while q:
     x = q.popleft()
     for i in range(1, n + 1):
