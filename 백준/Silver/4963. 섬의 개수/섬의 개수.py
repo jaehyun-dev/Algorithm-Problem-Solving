@@ -3,14 +3,14 @@ input = sys.stdin.readline
 sys.setrecursionlimit(10 ** 6)
 
 def dfs(r, c):
-    global vis
-    if not (0 <= r < h and 0 <= c < w and not vis[r][c] and graph[r][c] == 1):
+    if vis[r][c] or graph[r][c] == 0:
         return False
     vis[r][c] = True
     for dr, dc in ((-1, -1), (-1, 0), (-1, 1), (0, 1), (1, 1), (1, 0), (1, -1), (0, -1)):
         nr = r + dr
         nc = c + dc
-        dfs(nr, nc)
+        if 0 <= nr < h and 0 <= nc < w:
+            dfs(nr, nc)
     return True
 
 while 1:
