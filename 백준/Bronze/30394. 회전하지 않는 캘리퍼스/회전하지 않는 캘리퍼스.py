@@ -1,3 +1,5 @@
+import sys
+input = sys.stdin.readline
 N = int(input())
 m = int(1e9)
 M = int(-1e9)
