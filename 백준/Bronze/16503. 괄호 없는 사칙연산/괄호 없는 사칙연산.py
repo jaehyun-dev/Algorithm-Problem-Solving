@@ -1,0 +1,6 @@
+K1, O1, K2, O2, K3 = input().split()
+K1, K2, K3 = map(int, (K1, K2, K3))
+a = eval(f"int(int({K1} {O1} {K2}) {O2} {K3})")
+b = eval(f"int({K1} {O1} int(({K2} {O2} {K3})))")
+print(min(a, b))
+print(max(a, b))
