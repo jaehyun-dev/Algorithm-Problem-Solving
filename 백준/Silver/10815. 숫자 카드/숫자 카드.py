@@ -1,0 +1,6 @@
+N = int(input())
+c = set(map(int, input().split()))
+M = int(input())
+l = list(map(int, input().split()))
+ans = list(map(lambda x: int(x in c), l))
+print(*ans)
