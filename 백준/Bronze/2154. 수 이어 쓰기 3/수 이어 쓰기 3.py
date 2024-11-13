@@ -1,5 +1,6 @@
 N = int(input())
-s = ""
+n = []
 for i in range(1, N + 1):
-    s += str(i)
+    n.append(str(i))
+s = ''.join(n)
 print(s.find(str(N)) + 1)
